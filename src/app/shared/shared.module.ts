@@ -4,11 +4,11 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 
-@NgModule({
-  declarations: [NavBarComponent],
+@NgModule( {
   imports: [
-    CommonModule
+    CommonModule,
   ],
-  exports: [NavBarComponent]
-})
+  declarations: [ NavBarComponent ],
+  exports: [ NavBarComponent ],
+} )
 export class SharedModule { }

@@ -1,0 +1,180 @@
+$primary: white;
+$secondary: black;
+.my-header {
+    background: green;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  /* position: sticky;
+    position: -webkit-sticky; */
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  transition: all 0.5s;
+  overflow: hidden;
+  color: $primary;
+  .sm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    h2 {
+      font-family: fontA;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+    .erebtn {
+      border: none;
+      background: none;
+      font-size: 2rem;
+      display: block;
+      outline: none;
+      color: $primary;
+    }
+  }
+  .nav-menu {
+    /*  background: #E5E5E5; */
+    height: 0;
+    transform: translateY(-30%);
+    transition: all 0.5s;
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      li {
+        padding: 15px 20px;
+        a {
+          text-decoration: none;
+          padding: 10px;
+          border-radius: 5px;
+          color: $primary;
+          cursor: pointer;
+          font-family: fontB;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 0.8rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .showNav {
+    transform: translateY(0%) !important;
+    animation: showNav 0.5s ease-in-out;
+    background: yellow;
+  }
+
+  @keyframes showNav {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+.add-h-background {
+  background: white !important;
+  color: $secondary !important;
+  .sm-header {
+    .erebtn {
+      color: $secondary;
+    }
+  }
+  a {
+    color: $secondary !important;
+  }
+}
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+@media screen and (min-width: $screen-md-min) {
+  //do Smth
+  .my-header {
+    grid-template-columns: 30% 70%;
+    .sm-header {
+      justify-content: center;
+      .erebtn {
+        display: none;
+      }
+    }
+    .nav-menu {
+      height: initial;
+      transform: translateY(0%);
+      display: flex;
+      align-items: center;
+      ul {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        li {
+          padding: 0px;
+        }
+      }
+    }
+  }
+}
+
+
+
+/*   toggle button css */
+.toggle-Div {
+    position: relative;
+    z-index: 100;
+}
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+
+    .bar1 {
+        width: 30px;
+    }
+    .bar2 {
+        width: 20px;
+    }
+    .bar3 {
+        width: 10px;
+    }
+    .bar1,
+    .bar2,
+    .bar3  {
+        height: 2px;
+        margin: 3px 0;
+        transition: 0.3s;
+        background: black;
+    }
+    
+}
+.buttonchange {
+    .bar1 {
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+    .bar2 {
+        opacity: 0;
+    }
+    .bar3 {
+        width: 30px;
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/*   toggle button css ends here */
