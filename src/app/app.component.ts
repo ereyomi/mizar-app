@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// tslint:disable-next-line:typedef
 import AOS from 'aos';
 @Component({
   selector: 'app-root',
