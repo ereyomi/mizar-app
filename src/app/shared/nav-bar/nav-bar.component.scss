@@ -1,7 +1,7 @@
 $primary: white;
 $secondary: black;
 .my-header {
-    background: green;
+  background: white;
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
@@ -9,28 +9,22 @@ $secondary: black;
     position: -webkit-sticky; */
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 99;
   transition: all 0.5s;
   overflow: hidden;
-  color: $primary;
   .sm-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    h2 {
-      font-family: fontA;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 1.8rem;
+    padding: 20px 0;
+    .logo,
+    .logoholder {
+        height: 30px;
     }
-    .erebtn {
-      border: none;
-      background: none;
-      font-size: 2rem;
-      display: block;
-      outline: none;
-      color: $primary;
+    .logoholder img {
+        height: 30px;
+        object-fit: contain;
     }
   }
   .nav-menu {
@@ -49,11 +43,8 @@ $secondary: black;
           text-decoration: none;
           padding: 10px;
           border-radius: 5px;
-          color: $primary;
+          color: $secondary;
           cursor: pointer;
-          font-family: fontB;
-          font-style: normal;
-          font-weight: normal;
           font-size: 0.8rem;
           text-transform: uppercase;
         }
@@ -63,7 +54,7 @@ $secondary: black;
   .showNav {
     transform: translateY(0%) !important;
     animation: showNav 0.5s ease-in-out;
-    background: yellow;
+    background: white;
   }
 
   @keyframes showNav {
@@ -107,10 +98,15 @@ $screen-xl-min: 1200px;
   .my-header {
     grid-template-columns: 30% 70%;
     .sm-header {
-      justify-content: center;
-      .erebtn {
-        display: none;
-      }
+      justify-content: flex-start;
+      padding: 0;
+      .logo,
+        .logoholder {
+            height: 50px;
+        }
+        .logoholder img {
+            height: 50px;
+        }
     }
     .nav-menu {
       height: initial;
@@ -129,6 +125,9 @@ $screen-xl-min: 1200px;
         }
       }
     }
+  }
+  .toggle-Div {
+      display: none;
   }
 }
 

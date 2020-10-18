@@ -31,12 +31,20 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     if ( !this.navMenu.nativeElement.classList.contains( 'showNav' ) ) {
       this.navMenu.nativeElement.classList.add( 'showNav' );
       this.navMenu.nativeElement.style.height = this.navHeight;
-      console.log( 'hmm' );
     } else {
       this.navMenu.nativeElement.classList.remove( 'showNav' );
       this.navMenu.nativeElement.style.height = '0px';
-      console.log( 'ywetyw' );
     }
   }
+  /* handleScroll: _.debounce((e) => {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        e.isActive = true;
+      } else {
+        e.isActive = false;
+      }
+    }, 200), */
 
 }
