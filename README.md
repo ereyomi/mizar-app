@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d890467e-a238-4a2d-8443-cc6644ecd36f/deploy-status)](https://app.netlify.com/sites/xenodochial-sammet-d50063/deploys)
+
 # App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
