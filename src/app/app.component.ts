@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// tslint:disable-next-line:typedef
-import AOS from 'aos';
+import * as AOS from 'aos';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
