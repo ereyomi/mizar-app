@@ -3,3 +3,6 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import '~src/assets/fonts/fonts';
+body {
+    font-family: Poppins-600-medium;
+}
