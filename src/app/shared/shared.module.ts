@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -8,7 +9,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   imports: [
     CommonModule,
   ],
-  declarations: [ NavBarComponent ],
-  exports: [ NavBarComponent ],
+  declarations: [ NavBarComponent, FooterComponent ],
+  exports: [ NavBarComponent, FooterComponent ],
 } )
 export class SharedModule { }
