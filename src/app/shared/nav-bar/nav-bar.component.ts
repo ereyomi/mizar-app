@@ -19,6 +19,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+
   }
 
 
@@ -34,6 +35,12 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     } else {
       this.navMenu.nativeElement.classList.remove( 'showNav' );
       this.navMenu.nativeElement.style.height = '0px';
+    }
+  }
+  mediaJavaScript(): void {
+    const mql = window.matchMedia( '(max-width: 800px)' );
+    if ( mql ) {
+      this.navMenu.nativeElement.style.height = this.navHeight;
     }
   }
   /* handleScroll: _.debounce((e) => {
