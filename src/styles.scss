@@ -3,6 +3,21 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import '~src/assets/fonts/fonts';
+$secondary:  #c33b32;
 body {
-    font-family: Poppins-600-medium;
+    font-family: Poppins-500-regular;
+}
+.secondary-app-color {
+    color: $secondary !important;
+}
+.title-line {
+    width: 40%;
+    height: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background: $secondary;
+    margin: 10px 0;
+}
+.poppins-600-Bold {
+    font-family: Poppins-600-Bold;
 }
