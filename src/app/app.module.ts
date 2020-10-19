@@ -5,13 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
-import { HomeModule } from './pages/home/home.module';
-import { WhoWeAreComponent } from './pages/who-we-are/who-we-are.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WhoWeAreComponent,
   ],
   imports: [
     BrowserModule,
