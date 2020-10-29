@@ -33,3 +33,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - [stackoverflow](https://stackoverflow.com/questions/51887581/angular-routing-not-working-on-netlify-on-page-refresh)
 
 -[medium](https://medium.com/@seraya/netlify-redirect-rules-for-angular-6-apps-d9f27ad40449)
+
+### Animate on Scroll
+
+- [AOS](https://michalsnik.github.io/aos/) 
+
+- [Youtube turorial for Angular](https://youtu.be/j3HiTqlYBZk)

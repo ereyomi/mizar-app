@@ -10,6 +10,7 @@ export class WhoWeAreComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log( 'here' );
   }
 
 }

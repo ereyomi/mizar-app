@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { AppIntroSectionComponent } from './app-intro-section/app-intro-section.component';
 
 
 
@@ -11,7 +12,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule,
   ],
-  declarations: [ NavBarComponent, FooterComponent ],
-  exports: [ NavBarComponent, FooterComponent ],
+  declarations: [ NavBarComponent, FooterComponent, AppIntroSectionComponent ],
+  exports: [ NavBarComponent, FooterComponent, AppIntroSectionComponent ],
 } )
 export class SharedModule { }
