@@ -1,14 +1,19 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild, } from '@angular/core';
 
-@Component( {
+@Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: [ './nav-bar.component.scss' ]
-} )
+  styleUrls: ['./nav-bar.component.scss']
+})
 export class NavBarComponent implements OnInit, AfterViewInit {
-  @ViewChild( 'navMenu', { static: false } ) navMenu: ElementRef;
+  @ViewChild('navMenu', { static: false }) navMenu: ElementRef;
   buttonToggle = false;
   navHeight: any;
+
+  // tslint:disable-next-line:typedef
+  @HostListener('window:scroll', ['$event']) navScrollE(event: any) {
+    console.log('scrolling', event);
+  }
   constructor() {
     // this.navHeight = this.navMenu.nativeElement.scrollHeight
   }
@@ -29,17 +34,17 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   }
 
   toggleNav(): void {
-    if ( !this.navMenu.nativeElement.classList.contains( 'showNav' ) ) {
-      this.navMenu.nativeElement.classList.add( 'showNav' );
+    if (!this.navMenu.nativeElement.classList.contains('showNav')) {
+      this.navMenu.nativeElement.classList.add('showNav');
       this.navMenu.nativeElement.style.height = this.navHeight;
     } else {
-      this.navMenu.nativeElement.classList.remove( 'showNav' );
+      this.navMenu.nativeElement.classList.remove('showNav');
       this.navMenu.nativeElement.style.height = '0px';
     }
   }
   mediaJavaScript(): void {
-    const mql = window.matchMedia( '(max-width: 800px)' );
-    if ( mql ) {
+    const mql = window.matchMedia('(max-width: 800px)');
+    if (mql) {
       this.navMenu.nativeElement.style.height = this.navHeight;
     }
   }
