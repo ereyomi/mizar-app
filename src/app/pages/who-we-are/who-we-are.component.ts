@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./who-we-are.component.scss']
 })
 export class WhoWeAreComponent implements OnInit {
-
+  title = 'WHO WE ARE';
+  titleB = ' Our Core Value';
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component( {
   selector: 'app-app-intro-section',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: [ './app-intro-section.component.scss' ]
 } )
 export class AppIntroSectionComponent implements OnInit {
+  @Input() title: string;
   introBackground = 'url("assets/assets-mizar/mizar-intro-b.jpg")';
   constructor() { }
 

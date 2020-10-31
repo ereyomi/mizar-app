@@ -1,8 +1,9 @@
 <div class="row app-intro" [ngStyle]="{'background': introBackground}">
     <div class="app-intro-inner">
         <!-- <img src="assets/assets-mizar/mizar-intro.jpg" alt=""> -->
+        <div class="appOverlay"></div>
         <div class="textHolder">
-            <p class="display-3 text-center text-white">Who We are</p>
+            <p class="display-3 text-center text-white">{{ title.toUpperCase() }}</p>
         </div>
     </div>
 </div>
