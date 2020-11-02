@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild, } from '@angular/core';
+import { Router } from '@angular/router';
 import * as  _ from 'lodash';
 @Component({
   selector: 'app-nav-bar',
@@ -22,7 +23,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
       this.togglePositionFixed(false);
     }
   }, 100);
-  constructor() {
+  constructor(private route: Router) {
   }
 
   // tslint:disable-next-line:typedef
@@ -55,10 +56,13 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   }
   togglePositionFixed(status: boolean = true): void {
     if (status) {
-      this.mainHeader.nativeElement.classList.add('position-fixed');
+      this.mainHeader.nativeElement.classList.add('my-header-fixed');
     } else {
-      this.mainHeader.nativeElement.classList.remove('position-fixed');
+      this.mainHeader.nativeElement.classList.remove('my-header-fixed');
     }
   }
-
+  routeTo(rout: string): void {
+    this.toggle();
+    this.route.navigate([rout]);
+  }
 }

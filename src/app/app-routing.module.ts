@@ -8,7 +8,11 @@ const routes: Routes = [
   },
   {
     path: 'whoWeAre',
-    loadChildren: () => import( './pages/who-we-are/who-we-are.module' ).then( m => m.WhoWeAreModule )
+    loadChildren: () => import('./pages/who-we-are/who-we-are.module').then(m => m.WhoWeAreModule)
+  },
+  {
+    path: 'ourBusiness',
+    loadChildren: () => import('./pages/our-business/our-business.module').then(m => m.OurBusinessModule)
   },
   {
     path: '',
@@ -18,7 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot( routes, { preloadingStrategy: PreloadAllModules })],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,16 +1,22 @@
 $primary: white;
 $secondary: black;
+.my-header-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
 .my-header {
   background: white;
-  width: 100%;
+  width: 100% !important;
+  display: block;
   display: grid;
   grid-template-columns: 100%;
   /* position: sticky;
-    position: -webkit-sticky; */
-  /* position: fixed; */
+    position: -webkit-sticky; */ 
+  /* position: fixed; 
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 99;*/
   transition: all 0.5s;
   overflow: hidden;
   .sm-header {

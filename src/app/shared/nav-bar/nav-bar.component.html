@@ -1,9 +1,8 @@
-
 <div class="my-header px-3 px-md-5 py-md-3" #mainHeader>
     <div class="sm-header">
         <div class="logo">
             <div class="logoholder">
-                <img src="assets/logo/logo-dark7.png" alt="" srcset="">
+                <img src="assets/logo/logo-sm.png" alt="" srcset="">
             </div>
         </div>
         <div class="toggle-Div">
@@ -17,13 +16,13 @@
     <div class="nav-menu" #navMenu [ngClass]="{'showNav': buttonToggle}">
         <ul>
             <li>
-                <a routerLink="/home">Home</a>
+                <a (click)="routeTo('home')">Home</a>
             </li>
             <li>
-                <a routerLink="/whoWeAre">Who we are</a>
+                <a (click)="routeTo('whoWeAre')">Who we are</a>
             </li>
             <li>
-                <a routerLink="./">Our Business</a>
+                <a (click)="routeTo('ourBusiness')">Our Business</a>
             </li>
             <li>
                 <a routerLink="./">Career</a>
