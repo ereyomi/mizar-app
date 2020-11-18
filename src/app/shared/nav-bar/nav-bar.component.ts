@@ -12,6 +12,9 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   buttonToggle = false;
   navHeight: any;
 
+  screenWidth = 0;
+  desktopScreen = 768;
+
   // tslint:disable-next-line:typedef
   @HostListener('window:scroll', ['$event']) navScrollE = _.debounce((e) => {
     if (
@@ -23,11 +26,16 @@ export class NavBarComponent implements OnInit, AfterViewInit {
       this.togglePositionFixed(false);
     }
   }, 100);
+
+  @HostListener('window:resize', ['$event']) appResize = _.debounce(e => {
+    this.screenWidth = e.target.innerWidth;
+  }, 200);
   constructor(private route: Router) {
   }
 
   // tslint:disable-next-line:typedef
   ngAfterViewInit() {
+    this.screenWidth = window.innerWidth;
     this.navHeight = `${ this.navMenu.nativeElement.scrollHeight }px`;
   }
 
@@ -62,7 +70,10 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     }
   }
   routeTo(rout: string): void {
-    this.toggle();
+    console.log(this.screenWidth, this.desktopScreen);
+    if (this.screenWidth < this.desktopScreen) {
+      this.toggle();
+    }
     this.route.navigate([rout]);
   }
 }
