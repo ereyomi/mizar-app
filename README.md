@@ -42,3 +42,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Lodash
 - [adding lodash to angular project](https://stackoverflow.com/questions/48836140/using-lodash-in-angular-4/48836201)
+
+### Tab Icon
+- (icon generator)[https://www.favicon-generator.org/]
