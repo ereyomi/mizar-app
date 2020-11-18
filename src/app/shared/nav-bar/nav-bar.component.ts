@@ -70,7 +70,6 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     }
   }
   routeTo(rout: string): void {
-    console.log(this.screenWidth, this.desktopScreen);
     if (this.screenWidth < this.desktopScreen) {
       this.toggle();
     }

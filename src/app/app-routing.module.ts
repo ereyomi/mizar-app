@@ -15,6 +15,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/our-business/our-business.module').then(m => m.OurBusinessModule)
   },
   {
+    path: 'contact',
+    loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)
+  },
+  {
+    path: 'careers',
+    loadChildren: () => import('./pages/careers/careers.module').then(m => m.CareersModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
