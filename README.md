@@ -53,3 +53,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### Milestone template
 
 - [Milestone templates](https://freefrontend.com/css-timelines/)
+- [used for the project](https://codepen.io/alanhouser/pen/aErrQJac)
