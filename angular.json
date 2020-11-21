@@ -30,6 +30,11 @@
                 "glob": "_redirects",
                 "input": "src",
                 "output": "/"
+              },
+              {
+                "glob": ".htaccess",
+                "input": "src",
+                "output": "/"
               }
             ],
             "styles": [
