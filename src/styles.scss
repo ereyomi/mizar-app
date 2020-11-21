@@ -3,9 +3,15 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import '~src/assets/fonts/fonts';
+
+@import url('https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i,900,900i|Saira+Extra+Condensed:100,200,300,400,500,600,700,800|Saira:100,200,300,400,500,600,700,800');
+
+$font-title: 'Saira', sans-serif;
+$font-text: 'Chivo', sans-serif;
+
 $secondary:  #c33b32;
 body {
-    font-family: Poppins-500-regular;
+    font-family: $font-text;
 }
 .secondary-app-color {
     color: $secondary !important;
@@ -21,6 +27,8 @@ body {
     background: $secondary;
     margin: 10px 0;
 }
-.poppins-600-Bold {
-    font-family: Poppins-600-Bold;
+p,
+ul li {
+   font-family: $font-text !important;
+   font-weight: 100 !important;
 }

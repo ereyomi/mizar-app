@@ -4,6 +4,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { AppIntroSectionComponent } from './app-intro-section/app-intro-section.component';
+import { MilestoneComponent } from './milestone/milestone.component';
 
 
 
@@ -12,7 +13,7 @@ import { AppIntroSectionComponent } from './app-intro-section/app-intro-section.
     CommonModule,
     RouterModule,
   ],
-  declarations: [ NavBarComponent, FooterComponent, AppIntroSectionComponent ],
-  exports: [ NavBarComponent, FooterComponent, AppIntroSectionComponent ],
+  declarations: [ NavBarComponent, FooterComponent, AppIntroSectionComponent, MilestoneComponent ],
+  exports: [NavBarComponent, FooterComponent, AppIntroSectionComponent, MilestoneComponent ],
 } )
 export class SharedModule { }

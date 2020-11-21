@@ -45,3 +45,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Tab Icon
 - (icon generator)[https://www.favicon-generator.org/]
+
+### Milestone template
+
+- (Milestone templates)[https://freefrontend.com/css-timelines/]
