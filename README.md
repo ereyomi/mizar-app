@@ -1,5 +1,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d890467e-a238-4a2d-8443-cc6644ecd36f/deploy-status)](https://app.netlify.com/sites/xenodochial-sammet-d50063/deploys)
 
+- Auto Deploy to Netlify - [https://xenodochial-sammet-d50063.netlify.app/home](https://xenodochial-sammet-d50063.netlify.app/home)
+
+- Delop to main website - [http://mizareridanus.com](http://mizareridanus.com)
+
 # App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
