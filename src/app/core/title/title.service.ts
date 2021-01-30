@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 import { CustomRouterService } from '../custom-router/custom-router.service';
 
@@ -25,7 +25,7 @@ export class TitleService {
       );
   }
 
-  handleNavigationTitle() {
+  handleNavigationTitle(): Observable<any> {
     return this.routerS
       .getNavigationEndEvent()
       .pipe(
@@ -60,7 +60,7 @@ export class TitleService {
     this.titleStore.next(title);
   }
 
-  getTitle() {
+  getTitle(): any {
     return this.titleStore.getValue();
   }
 }

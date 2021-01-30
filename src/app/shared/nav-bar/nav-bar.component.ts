@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild, } from '@angular/core';
 import { Router } from '@angular/router';
-import * as  _ from 'lodash';
+import { debounce } from 'lodash';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -16,7 +16,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   desktopScreen = 768;
 
   // tslint:disable-next-line:typedef
-  @HostListener('window:scroll', ['$event']) navScrollE = _.debounce((e) => {
+  @HostListener('window:scroll', ['$event']) navScrollE = debounce((e) => {
     if (
       document.body.scrollTop > 300 ||
       document.documentElement.scrollTop > 300
@@ -27,7 +27,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     }
   }, 100);
 
-  @HostListener('window:resize', ['$event']) appResize = _.debounce(e => {
+  @HostListener('window:resize', ['$event']) appResize = debounce(e => {
     this.screenWidth = e.target.innerWidth;
   }, 200);
   constructor(private route: Router) {

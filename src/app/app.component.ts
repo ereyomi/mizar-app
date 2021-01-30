@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.titleService.handleNavigationTitle().subscribe((_v) => {});
+    this.titleService.handleNavigationTitle().subscribe((_: any) => {});
     AOS.init();
   }
 }

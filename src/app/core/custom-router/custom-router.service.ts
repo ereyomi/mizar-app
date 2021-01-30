@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { filter, share } from 'rxjs/operators';
 
 @Injectable({
@@ -9,13 +10,13 @@ export class CustomRouterService {
   routerEv$ = this.router.events.pipe(share());
   constructor(private router: Router) {}
 
-  getNavigationEndEvent() {
+  getNavigationEndEvent(): Observable<any> {
     return this.routerEv$.pipe(
       filter((event) => event instanceof NavigationEnd)
     );
   }
 
-  processChildData(state, dataKey) {
+  processChildData(state, dataKey): any {
     const stateChild = this.getStateChildFromTree(state);
     if (
       stateChild &&
@@ -28,7 +29,7 @@ export class CustomRouterService {
     }
   }
 
-  processChildParams(state, dataKey) {
+  processChildParams(state, dataKey): any {
     const stateChild = this.getStateChildFromTree(state);
     if (
       stateChild &&
@@ -41,7 +42,7 @@ export class CustomRouterService {
     }
   }
 
-  processChildSnapshot(state, dataKey) {
+  processChildSnapshot(state, dataKey): any | null {
     const stateChild = this.getStateChildFromTree(state);
     if (
       stateChild &&
@@ -54,7 +55,7 @@ export class CustomRouterService {
     }
   }
 
-  getStateChildFromTree(state) {
+  getStateChildFromTree(state: any): any {
     let iteration = 0;
     let stateChild = state;
     while (iteration < 10 && stateChild) {
